@@ -6,7 +6,7 @@
   }
 }
 .header {
-  background: $dark_2 url(../img/header/main-screen-bg.jpg)no-repeat center center/cover;
+  background: $dark url(../img/header/main-screen-bg.png)no-repeat top center/100% auto;
   padding-top: 32px;
   &__logo {
     max-width: 199px;
@@ -199,10 +199,14 @@
     display: block;
   }
 }
-
+@include phones {
+  .header {
+    background: $default;
+  }
+}
 //Main Screen
 .main-screen {
-  padding: 99px 0;
+  padding: 64px 0;
   &__title {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -322,9 +326,6 @@
   }
 }
 @include laptop {
-  .main-screen {
-    padding: 84px 0;
-  }
   .main-screen__title {
     font-weight: 700;
     font-size: 43px;
@@ -336,9 +337,6 @@
   }
 }
 @include tablet {
-  .main-screen {
-    padding: 64px 0;
-  }
   .main-screen__title {
     text-align: center;
   }
@@ -370,6 +368,7 @@
     font-size: 22px;
   }
 }
+
 //Advantages
 .advantages {
   display: flex;
@@ -447,8 +446,9 @@
     display: flex;
   }
   &__image {
-    max-width: 321px;
+    min-width: 321px;
     margin-right: 32px;
+    width: 29%;
   }
   &__description_quote_image {
     width: 25px;
@@ -471,6 +471,14 @@
   }
   .about__image {
     margin-bottom: 32px;
+  }
+}
+@include phones {
+  .about__image {
+    max-width: 321px;
+    margin: 0 auto 32px;
+    min-width: unset;
+    width: 100%;
   }
 }
 
@@ -496,44 +504,77 @@
   }
   &__accordion_card {
     border-radius: 10px;
-  }
-  &__accordion_header {
-    padding: 32px;
-    background: $default;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__accordion_btn {
+    transition: .2s;
+    padding: 32px 32px 32px 32px;
+    background: $default;
     color: $light;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px 10px 10px 10px;
     margin-bottom: 0!important;
     &:hover {
       color: $light;
     }
-  }
-  &__accordion_btn_show {
+  }  
+  &__accordion_show {
     display: flex;
     align-items: center;
-  }
-  &__accordion_show {
-    margin-right: 8px;
-    margin-bottom: 0!important;
+    p {
+      margin-bottom: 0;
+    }
   }
   &__accordion_arrow {
     width: 8px;
+    margin-left: 8px;
   }
   &__card_show {
     border-radius: 0 0 10px 10px;
   }
   &__card_body {
     background: $light;
-    padding: 32px;
+    padding: 0 32px 32px;
     color: $dark;
     border-radius: 0px 0px 10px 10px;
   }
+  &__accordion_btn_hide {
+    color: $default;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: fit-content;
+    margin-top: 16px;
+    margin-left: auto;
+    p {
+      margin-right: 8px;
+      margin-bottom: 0;
+    }
+  }
+  &-active {
+    transition: .2s;
+    background: $light!important;
+    border-radius: 10px 10px 0px 0px;
+    color: $default;
+    padding: 32px 32px 16px 32px;
+
+    p {
+      color: $dark;
+    }
+    >.answers__accordion_show {
+      display: none;
+    }
+  }
 }
 
+
+.collapsing {
+  transition: .2s;
+}
 //Footer-form
 .footer-form {
   background: $dark_3;
