@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>КОМПЛЕКТСЕРВИС</title>
+    <link rel="icon" href="/img/header/header-logo.svg">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+
+<header class="header">
+  <div class="container-fluid">
+    <nav class="main-nav" role="navigation">
+      <!-- Mobile menu toggle button (hamburger/x icon) -->
+      <input id="main-menu-state" type="checkbox" />
+      <label class="main-menu-btn" for="main-menu-state">
+        <span class="main-menu-btn-icon"></span> Toggle main menu visibility
+      </label>
+      <a href="/" class="header__logo">
+          <img src="img/logo/header-logo.svg" alt="logo">
+      </a> 
+    
+      <!-- Sample menu definition -->
+      <ul id="main-menu" class="sm sm-clean">
+        <li><a class="yakor" href="/">Главная</a></li>
+        <li><a class="yakor" href="#about">Слово руководителю</a></li>
+        <li><a class="yakor" href="#answers">Вопрос-ответ</a></li>
+        <li><a class="yakor" href="#contacts">Контакты</a></li>
+        <li class="header__menu_contacts"><a href="tel:+79028915570">+7 (902) 891-55-70</a></li>
+        <li class="header__menu_contacts"><a href="mailto:2672091@mail.ru">2672091@mail.ru</a></li>              
+      </ul>
+      <ul class="header__contacts">
+        <li class="header__contacts_item">
+          <div class="header__contacts_icon">
+            <img src="img/header/header-phone-icon.svg" alt="">
+          </div>
+          <a href="tel:+79028915570" class="header__contacts_data h3">
+            +7 (902) 891-55-70
+          </a>
+        </li>
+        <li class="header__contacts_item">
+          <div class="header__contacts_icon">
+            <img src="img/header/header-email-icon.svg" alt="">
+          </div>
+          <a href="mailto:2672091@mail.ru" class="header__contacts_data h3">
+            2672091@mail.ru
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="main-screen">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="main-screen__title">
+            ПОДБОР И ПРОДАЖА<br>ЗАПЧАСТЕЙ ДЛЯ СПЕЦТЕХНИКИ
+          </h1>
+          <p class="main-screen__description">
+            Т-170, Т-130, Б-10,<br>Автогрейдера Д3-98
+          </p>
+        </div>
+        <div class="col-md-6">
+          <form class="main-screen__form">
+            <p class="main-screen__form_title h3">
+              Оставьте заявку и мы подберем<br>Вам детали по лучшей цене
+            </p>
+            <input class="main-screen__form_input" type="hidden" value="Форма с главного экрана" name="title">
+            <input class="main-screen__form_input" type="text" placeholder="Имя" name="name">
+            <input class="main-screen__form_input" type="text" placeholder="Телефон" name="phone">
+            <input class="main-screen__form_input" type="text" placeholder="Почта" name="email">
+            <textarea class="main-screen__form_textarea" name="messege" placeholder="Какие детали нужны?"></textarea>
+            <label class="main-screen__form_label">
+              <input type="checkbox" id="checkbox" class="main-screen__form_checkbox" checked required>
+              <span class="main-screen__form_checkbox-span"></span>
+              <span class="small main-screen__form_label_link">
+                Я согласен на обработку персональных данных
+              </span>
+            </label>
+            <button type="submit" class="main-screen__form_btn h4">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="advantages">
+      <div class="advantages__item">
+        <span class="icon-advantages-1 advantages__item_icon">&#xe901;</span>
+        <p class="advantages__desc h3">Все запчасти<br>всегда в наличии</p>
+      </div>
+      <div class="advantages__item">
+        <span class="icon-advantages-2 advantages__item_icon">&#xe902;</span>
+        <p class="advantages__desc h3">Заводская<br>гарантия</p>
+      </div>
+      <div class="advantages__item">
+        <span class="icon-advantages-3 advantages__item_icon">&#xe903;</span>
+        <p class="advantages__desc h3">Программа<br>утилизации</p>
+      </div>
+      <div class="advantages__item">
+        <span class="icon-advantages-4 advantages__item_icon">&#xe904;</span>
+        <p class="advantages__desc h3">Профессиональные<br>консультанты</p>
+      </div>
+      <div class="advantages__item">
+        <span class="icon-advantages-5 advantages__item_icon">&#xe900;</span>
+        <p class="advantages__desc h3">Отправка в день<br>заказа</p>
+      </div>
+    </div>
+  </div>    
+</header>
+<main class="main"> 
+  <section class="about section" id="about">
+    <div class="container-fluid">
+      <h2 class="section__title h2">
+        Слово руководителю
+      </h2>
+      <div class="about__wrap">
+        <div class="about__image">
+          <img src="img/about/about-image.jpg" alt="">
+        </div>
+        <div class="about__description">
+          <div class="about__description_quote_image">
+            <img src="img/about/quote-icon.svg" alt="">
+          </div>
+          <p class="about__description_quote p">
+            Здравствуйте, меня зовут Илья, я руководитель компании «Комплектсервис». Вот уже более 10 лет мы поставляем запчасти к спецтехнике:  Т-170, Т-130, Т10М и автогредейру ДЗ-98, Б-10. Я лично гарантирую вам лучшие условия поставки и профессиональный подбор. Напоминаю, что у нас лучшие цены, гарантия, отправка в день заказа! По любым вопросам вы можете писать на мою личную почту 2672091@mail.ru или по номеру телефона +7 (902) 891-55-70
+          </p>
+          <p class="about__description_quote_author strong">
+            Руководитель ООО ТД “КОМПЛЕКТСЕРВИС”<br>Бояркин И.Г.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sklad section">
+    <div class="container-fluid">
+      <h2 class="section__title h2">
+        Наш склад
+      </h2>
+      <div class="row">
+        <a href="img/sklad/sklad-1.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-1.jpg" alt="sklad__image">
+          </div>
+        </a>
+        <a href="img/sklad/sklad-2.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-2.jpg" alt="sklad__image">
+          </div>
+        </a>
+        <a href="img/sklad/sklad-3.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-3.jpg" alt="sklad__image">
+          </div>
+        </a>
+        <a href="img/sklad/sklad-4.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-4.jpg" alt="sklad__image">
+          </div>
+        </a>
+        <a href="img/sklad/sklad-5.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-5.jpg" alt="sklad__image">
+          </div>
+        </a>
+        <a href="img/sklad/sklad-6.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-6.jpg" alt="sklad__image">
+          </div>
+        </a>
+        <a href="img/sklad/sklad-7.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-7.jpg" alt="sklad__image">
+          </div>
+        </a>
+        <a href="img/sklad/sklad-8.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-8.jpg" alt="sklad__image">
+          </div>
+        </a>
+        <a href="img/sklad/sklad-9.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-9.jpg" alt="sklad__image">
+          </div>
+        </a>
+        <a href="img/sklad/sklad-10.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-10.jpg" alt="sklad__image">
+          </div>
+        </a>
+        <a href="img/sklad/sklad-11.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-11.jpg" alt="sklad__image">
+          </div>
+        </a>
+        <a href="img/sklad/sklad-12.jpg" data-fancybox="sklad" class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="sklad__image">
+            <img src="img/sklad/sklad-12.jpg" alt="sklad__image">
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="answers section">
+    <div class="container-fluid">
+      <h2 class="section__title answers__title h2">
+        Вопрос-ответ
+      </h2>
+      <div class="answers__accordion accordion" id="accordionExample">
+        <div class="answers__accordion_card">
+          <div class="answers__accordion_header" id="headingOne">
+            <a href="#collapseOne" class="answers__accordion_btn h3" data-toggle="collapse">
+              Как заказать?
+            </a>
+            <div class="answers__accordion_btn answers__accordion_btn_show">
+              <p class="answers__accordion_show h5">
+                ответ
+              </p>
+              <div class="answers__accordion_arrow">
+                <img src="img/answers/arrow-show.svg" alt="">
+              </div>
+            </div>
+          </div>      
+          <div id="collapseOne" class="collapse answers__card_show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="answers__card_body p">
+              Значимость этих проблем настолько очевидна, что высокотехнологичная концепция общественного уклада создаёт предпосылки для дальнейших направлений развития. Прежде всего, экономическая повестка сегодняшнего дня является качественно новой ступенью поставленных обществом задач. Следует отметить, что глубокий уровень погружения играет важную роль в формировании соответствующих условий активизации.
+            </div>
+            <div class="answers__accordion_footer">
+              <a href="#collapseOne" class="answers__accordion_btn h3" data-toggle="collapse">
+                Как заказать?
+              </a>
+              <div class="answers__accordion_btn answers__accordion_btn_show">
+                <p class="answers__accordion_show h5">
+                  ответ
+                </p>
+                <div class="answers__accordion_arrow">
+                  <img src="img/answers/arrow-show.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section> -->
+  <section class="footer-form section">
+    <div class="container-fluid">
+      <h2 class="section__title h2 footer-form__title">
+        У Вас остались вопросы или требуется помощь в подборе детали?
+      </h2>
+      <form class="footer-form__form">
+        <div class="footer-form__form_wrap">
+          <input class="footer-form__form_input" type="hidden" value="Заявка с формы 'У Вас остались вопросы или требуется помощь в подборе детали?'" name="title">
+          <input class="footer-form__form_input" type="text" placeholder="Имя" name="name">
+          <input class="footer-form__form_input" type="text" placeholder="Телефон/Почта" name="phone-email">
+          <input class="footer-form__form_input" type="text" placeholder="Вопрос" name="messege">
+          <button type="submit" class="footer-form__form_btn h4">Отправить</button>
+        </div>        
+        <label class="footer-form__form_label">
+          <input type="checkbox" id="checkbox" class="footer-form__form_checkbox" checked required>
+          <span class="footer-form__form_checkbox-span"></span>
+          <span class="small footer-form__form_label_link">
+            Согласен на обработку персональных данных, ознакомлен с политикой конфиденциальности
+          </span>
+        </label>
+        
+      </form>
+    </div>
+  </section>
+  <section class="section contacts" id="contacts">
+    <div class="container-fluid">
+      <h2 class="section__title h2">
+        Контакты
+      </h2>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <p class="contacts__requisites_title h3">
+            Общество с ограниченной ответственностью<br>ТД «КОМПЛЕКТСЕРВИС»
+          </p>
+          <ul class="contacts__requisites_list">
+            <li class="contacts__requisites_item">
+              <span class="contacts__requisites_item_key p">
+                ИНН
+              </span>
+              <span class="contacts__requisites_item_value p">
+                744 905 91 08
+              </span>
+            </li>
+            <li class="contacts__requisites_item">
+              <span class="contacts__requisites_item_key p">
+                КПП
+              </span>
+              <span class="contacts__requisites_item_value p">
+                744 901 001
+              </span>
+            </li>
+            <li class="contacts__requisites_item">
+              <span class="contacts__requisites_item_key p">
+                Расчетный счет
+              </span>
+              <span class="contacts__requisites_item_value p">
+                407 028 108 720 000 085 60
+              </span>
+            </li>
+            <li class="contacts__requisites_item">
+              <span class="contacts__requisites_item_key p">
+                Банк
+              </span>
+              <span class="contacts__requisites_item_value p">
+                Отделение № 8597 Сбербанка России
+              </span>
+            </li>
+            <li class="contacts__requisites_item">
+              <span class="contacts__requisites_item_key p">
+                Корреспондентский счет 
+              </span>
+              <span class="contacts__requisites_item_value p">
+                301 018 107 000 000 00 602
+              </span>
+            </li>
+            <li class="contacts__requisites_item">
+              <span class="contacts__requisites_item_key p">
+                БИК 
+              </span>
+              <span class="contacts__requisites_item_value p">
+                047 501 602
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <ul class="contacts__address_list">
+            <li class="contacts__address_item">
+              <div class="contacts__address_item_icon">
+                <img src="img/contacts/location-icon.svg" alt="">
+              </div>
+              <div class="contacts__address_item_text h3">
+                454010<br>г. Челябинск<br>ул.Енисейская, 13
+              </div>
+            </li>
+            <li class="contacts__address_item">
+              <div class="contacts__address_item_icon">
+                <img src="img/contacts/clock-icon.svg" alt="">
+              </div>
+              <div class="contacts__address_item_text h3">
+                Режим работы<br><span>пн-вс 9:00 - 18:00</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <ul class="contacts__phone_list">
+            <li class="contacts__phone_item">
+              <div class="contacts__phone_item_icon">
+                <img src="img/contacts/envelope-icon.svg" alt="">
+              </div>
+              <a href="mailto:2672091@mail.ru" class="contacts__phone_item_text h3">
+                2672091@mail.ru
+              </a>
+            </li>
+            <li class="contacts__phone_item">
+              <div class="contacts__phone_item_icon">
+                <img src="img/contacts/phone-icon.svg" alt="">
+              </div>
+              <a href="tel:+79028915570" class="contacts__phone_item_text h3">
+                +7 (902) 891-55-70
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer" id="footer">
+  <div class="container-fluid">
+    <div class="footer__wrap">
+      <p class="footer__copyright small">
+        2020, ООО ТД “КОМПЛЕКТСЕРВИС”
+      </p>
+      <div class="footer__dev">
+        <p class="small">Создание и разработка <a href="https://apimedia.ru/" class="small" target="_blank"> Api Media</a></p>
+      </div>
+    </div>   
+  </div>  
+</footer>
+<div class="d-none">
+  <div id="fancyalert" class="fancyalert">
+    <div class="fancyalert-text">Спасибо за заявку,<br> в ближайшее время с Вами свяжутся!</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
+
