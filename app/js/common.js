@@ -46,20 +46,6 @@ $(document).ready(function () {
         });
         return false;
     });
-
-    //Accorion
-    // $('.answers__accordion_btn').on('click', function() {
-    //     // $('.answers__accordion_btn').removeClass('answers-active');
-    //     $(this).toggleClass('answers-active');
-    // });
-    // $('.answers__accordion_btn_hide').on('click', function() {
-    //     $('.answers__accordion_btn').removeClass('answers-active');
-    //     $(this).toggleClass('answers-active');
-    // });
-    // $('.answers__accordion_btn_hide').on('click', function(e) {
-    //     e.preventDefault;
-    //     $(this).toggleClass('answers-active');
-    // });
 });
 const accordion = (triggersSelector) => {
     const accordionBtn = document.querySelectorAll(triggersSelector);
