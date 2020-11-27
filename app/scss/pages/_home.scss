@@ -5,6 +5,11 @@
     color: $dark;
   }
 }
+@include tablet {
+  .section__title {
+    text-align: center;
+  }
+}
 .header {
   background: $dark url(../img/header/main-screen-bg.png)no-repeat top center/100% auto;
   padding-top: 32px;
@@ -48,15 +53,16 @@
   .header__contacts {
     display: block;
   }
-  .main-nav {
+  .main-nav {    
     display: flex;
     align-items: flex-start;
   }
   .sm-clean {
+    background: $dark;
     padding: 0;
     li {
       a {
-        text-transform: uppercase;
+        // text-transform: uppercase;
         font-weight: 700 !important;
         transition: .35s;
         padding: 0 32px 0 0!important;
@@ -201,12 +207,21 @@
 }
 @include phones {
   .header {
-    background: $default;
+    background: $dark url(../img/header/main-screen-mobile-bg.jpg)no-repeat top center/100% auto;
+    padding-top: 0;
+  }
+  .main-nav__wrap {
+    background: $dark;
+    padding: 16px 0;
   }
 }
 //Main Screen
 .main-screen {
+  margin: 0 auto;
   padding: 64px 0;
+  >.container-fluid {
+    
+  }
   &__title {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -227,6 +242,22 @@
     color: $light;
     width: fit-content;
     display: block;
+    margin-bottom: 32px;
+  }
+  &__price {
+    color: $light;
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__price_link {
+    color: $light;
+    transition: .35s;
+    &:hover {
+      color: $secondary;
+      transition: .35s;
+    }
   }
   &__form {
     max-width: 474px;
@@ -347,6 +378,12 @@
   .main-screen__form {
     margin: 0 auto;
   }
+  .main-screen__price {
+    text-align: center;
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
 }
 @media screen and (max-width: 550.5px) {
   .main-screen__title {
@@ -371,8 +408,10 @@
 
 //Advantages
 .advantages {
-  display: flex;
-  height: fit-content;
+  &__wrap {
+    display: flex;
+    height: fit-content;
+  }
   &__item {
     width: 25%;
     padding: 55px 0;
@@ -410,7 +449,7 @@
   }
 }
 @media screen and(max-width: 1080.5px) {
-  .advantages {
+  .advantages__wrap {
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -429,14 +468,17 @@
     width: 50%;
   }
 }
-@media screen and(max-width: 490.5px) {
-  .advantages__item {
-    width: 80%;
+@include phones {
+  .advantages {
+    background: $dark;
   }
 }
-@media screen and(max-width: 380.5px) {
+@media screen and(max-width: 490.5px) {
   .advantages__item {
-    width: 100%;
+    width: 50%;
+  }
+  .advantages__desc {
+    font-size: 14px;
   }
 }
 
@@ -473,7 +515,7 @@
     margin-bottom: 32px;
   }
 }
-@include phones {
+@include tablet {
   .about__image {
     max-width: 321px;
     margin: 0 auto 32px;
@@ -542,6 +584,17 @@
     color: $dark;
     border-radius: 0px 0px 10px 10px;
   }
+  &__card_body_text {
+    margin-bottom: 16px;
+  }
+  &__price_link {
+    color: $default;
+    transition: .35s;
+    &:hover {
+      color: $secondary;
+      transition: .35s;
+    }
+  }
   &__accordion_btn_hide {
     color: $default;
     display: flex;
@@ -603,7 +656,7 @@
     }
   }
   &__form_btn {
-    background: radial-gradient(50% 50% at 50% 50%, #FFA499 0%, #F06352 100%);
+    background: radial-gradient(#FFA499,#F06352);
     box-shadow: 0px 10px 35px rgba(240, 99, 82, 0.55);
     border-radius: 10px;
     border: none;
@@ -613,7 +666,8 @@
     max-height: 52px;
     transition: .35s;
     &:hover {
-      background: $secondary_d3;
+      // background: $secondary_d2;
+      background: radial-gradient(#fd8d7f, #e22a14);
       transition: .35s;
     }
   }
