@@ -55,7 +55,7 @@ if (isset($_POST['title'])) {
 
 // Письмо
 $mail->isHTML(true);
-$mail->Subject = 'Заявка с сайта APIMedia'; // Заголовок письма
+$mail->Subject = 'Заявка с сайта КОМПЛЕКТСЕРВИС'; // Заголовок письма
 $mail->Body = $message; // Текст письма
 $mail->CharSet = "utf-8";
 // Результат

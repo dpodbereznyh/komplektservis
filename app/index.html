@@ -9,7 +9,20 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/main.min.css">
 </head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+  ym(69913831, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/69913831" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
 <header class="header">
     <div class="main-nav__wrap">
@@ -30,15 +43,15 @@
             <li><a class="yakor" href="#about">Слово руководителю</a></li>
             <li><a class="yakor" href="#answers">Вопрос-ответ</a></li>
             <li><a class="yakor" href="#contacts">Контакты</a></li>
-            <li class="header__menu_contacts"><a href="tel:+79028915570">+7 (902) 891-55-70</a></li>
-            <li class="header__menu_contacts"><a href="mailto:2672091@mail.ru">2672091@mail.ru</a></li>              
+            <li class="header__menu_contacts"><a href="tel:+79028915570" class="js-onClickGoal" data-goal="clickHeaderPhone">+7 (902) 891-55-70</a></li>
+            <li class="header__menu_contacts"><a href="mailto:2672091@mail.ru" class="js-onClickGoal" data-goal="clickHeaderEmail">2672091@mail.ru</a></li>              
           </ul>
           <ul class="header__contacts">
             <li class="header__contacts_item">
               <div class="header__contacts_icon">
                 <img src="img/header/header-phone-icon.svg" alt="">
               </div>
-              <a href="tel:+79028915570" class="header__contacts_data h3">
+              <a href="tel:+79028915570" class="header__contacts_data h3 js-onClickGoal" data-goal="clickHeaderPhone">
                 +7 (902) 891-55-70
               </a>
             </li>
@@ -46,7 +59,7 @@
               <div class="header__contacts_icon">
                 <img src="img/header/header-email-icon.svg" alt="">
               </div>
-              <a href="mailto:2672091@mail.ru" class="header__contacts_data h3">
+              <a href="mailto:2672091@mail.ru" class="header__contacts_data h3 js-onClickGoal" data-goal="clickHeaderEmail">
                 2672091@mail.ru
               </a>
             </li>
@@ -67,7 +80,7 @@
             </p>
           </div>
           <div class="col-md-6">
-            <form class="main-screen__form">
+            <form class="main-screen__form js-form-default">
               <p class="main-screen__form_title h3">
                 Оставьте заявку и мы подберем<br>Вам детали по лучшей цене
               </p>
@@ -83,7 +96,7 @@
                   Я согласен на обработку персональных данных
                 </span>
               </label>
-              <button type="submit" class="main-screen__form_btn h4">Отправить</button>
+              <button type="submit" class="main-screen__form_btn h4 js-validate-form js-onClickGoal" data-goal="clickMainScreenFormBtn">Отправить</button>
             </form>
           </div>
         </div>
@@ -125,7 +138,7 @@
       </h2>
       <div class="about__wrap">
         <div class="about__image">
-          <img src="img/about/about-image.jpg" alt="">
+          <img src="img/about/about-image.jpeg" alt="">
         </div>
         <div class="about__description">
           <div class="about__description_quote_image">
@@ -217,63 +230,7 @@
       </h2>
       <div class="answers__accordion accordion" id="accordionExample">
         <div class="answers__accordion_card">
-          <a href="#collapse-1" class="answers__accordion_btn h3 answers-active" data-toggle="collapse"  id="headingOne">
-            <p>Как заказать?</p>
-            <div class="answers__accordion_show">
-              <p class="h5">
-                ответ
-              </p>
-              <div class="answers__accordion_arrow">
-                <img src="img/answers/arrow-show.svg" alt="">
-              </div>
-            </div>
-          </a>             
-          <div id="collapse-1" class="collapse answers__card_show show" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div class="answers__card_body p">
-              <p>
-                Значимость этих проблем настолько очевидна, что высокотехнологичная концепция общественного уклада создаёт предпосылки для дальнейших направлений развития. Прежде всего, экономическая повестка сегодняшнего дня является качественно новой ступенью поставленных обществом задач. Следует отметить, что глубокий уровень погружения играет важную роль в формировании соответствующих условий активизации.
-              </p>
-              <a href="#collapse-1" class="answers__accordion_btn_hide h3" data-toggle="collapse">
-                <p class="h5">
-                  свернуть
-                </p>
-                <div class="answers__accordion_arrow">
-                  <img src="img/answers/arrow-hide.svg" alt="">
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="answers__accordion_card">
-          <a href="#collapse-2" class="answers__accordion_btn h3" data-toggle="collapse"  id="headingOne">
-            <p>Как оплатить и получить товар?</p>
-            <div class="answers__accordion_show">
-              <p class="h5">
-                ответ
-              </p>
-              <div class="answers__accordion_arrow">
-                <img src="img/answers/arrow-show.svg" alt="">
-              </div>
-            </div>
-          </a>             
-          <div id="collapse-2" class="collapse answers__card_show" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div class="answers__card_body p">
-              <p>
-                Значимость этих проблем настолько очевидна, что высокотехнологичная концепция общественного уклада создаёт предпосылки для дальнейших направлений развития. Прежде всего, экономическая повестка сегодняшнего дня является качественно новой ступенью поставленных обществом задач. Следует отметить, что глубокий уровень погружения играет важную роль в формировании соответствующих условий активизации.
-              </p>
-              <a href="#collapse-2" class="answers__accordion_btn_hide h3" data-toggle="collapse">
-                <p class="h5">
-                  свернуть
-                </p>
-                <div class="answers__accordion_arrow">
-                  <img src="img/answers/arrow-hide.svg" alt="">
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="answers__accordion_card">
-          <a href="#collapse-3" class="answers__accordion_btn h3" data-toggle="collapse"  id="headingOne">
+          <a href="#collapse-3" class="answers__accordion_btn h3 answers-active" data-toggle="collapse"  id="headingOne">
             <p>Можно ли скачать прайс?</p>
             <div class="answers__accordion_show">
               <p class="h5">
@@ -284,7 +241,7 @@
               </div>
             </div>
           </a>             
-          <div id="collapse-3" class="collapse answers__card_show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div id="collapse-3" class="collapse answers__card_show show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="answers__card_body p">
               <p class="answers__card_body_text">
                 Прайс-листы вы можете скачать по следующим ссылкам:
@@ -303,6 +260,129 @@
             </div>
           </div>
         </div>
+        <div class="answers__accordion_card">
+          <a href="#collapse-1" class="answers__accordion_btn h3" data-toggle="collapse"  id="headingOne">
+            <p>Доставка</p>
+            <div class="answers__accordion_show">
+              <p class="h5">
+                ответ
+              </p>
+              <div class="answers__accordion_arrow">
+                <img src="img/answers/arrow-show.svg" alt="">
+              </div>
+            </div>
+          </a>             
+          <div id="collapse-1" class="collapse answers__card_show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="answers__card_body p">
+              <p class="h5 answers__card_body_list_title">
+                Расчёт стоимости доставки грузов
+              </p>
+              <p class="strong answers__card_body_list_subtitle">
+                Транспортно-экспедиционные компании:
+              </p>
+              <ul class="answers__card_body_list">
+                <li class="answers__card_body_list_item">
+                  <a href="http://www.dellin.ru/calculator/" class="answers__card_body_list_item_link strong" target="_blank">Деловые линии</a>
+                  <p class="answers__card_body_list_item_text p">
+                    (рассчитать стоимость доставки)
+                  </p>
+                </li>
+                <li class="answers__card_body_list_item">
+                  <a href="http://www.jde.ru/calc" class="answers__card_body_list_item_link strong" target="_blank">ЖелДорЭкспедиция</a>
+                  <p class="answers__card_body_list_item_text p">
+                    (рассчитать стоимость доставки)
+                  </p>
+                </li>
+                <li class="answers__card_body_list_item">
+                  <a href="http://www.pecom.ru/ru/calculator/" class="answers__card_body_list_item_link strong" target="_blank">Первая экспедиционная компания</a>
+                  <p class="answers__card_body_list_item_text p">
+                    (рассчитать стоимость доставки)
+                  </p>
+                </li>
+                <li class="answers__card_body_list_item">
+                  <a href="http://www.rateksib.ru/tarify" class="answers__card_body_list_item_link strong" target="_blank">РАТЕК</a>
+                  <p class="answers__card_body_list_item_text p">
+                    (рассчитать стоимость доставки)
+                  </p>
+                </li>
+                <li class="answers__card_body_list_item">
+                  <a href="http://tk-kit.ru/customers/tariff/" class="answers__card_body_list_item_link strong" target="_blank">Кит</a>
+                  <p class="answers__card_body_list_item_text p">
+                    (рассчитать стоимость доставки)
+                  </p>
+                </li>
+                <li class="answers__card_body_list_item">
+                  <a href="http://chelyabinsk.nrg-tk.com/" class="answers__card_body_list_item_link strong" target="_blank">Энергия</a>
+                  <p class="answers__card_body_list_item_text p">
+                    (рассчитать стоимость доставки)
+                  </p>
+                </li>
+                <li class="answers__card_body_list_item">
+                  <a href="http://www.baikalsr.ru/value/calculator/" class="answers__card_body_list_item_link strong" target="_blank">Байкал сервис</a>
+                  <p class="answers__card_body_list_item_text p">
+                    (рассчитать стоимость доставки)
+                  </p>
+                </li>
+                <li class="answers__card_body_list_item">
+                  <a href="http://www.sherl.ru/ceny" class="answers__card_body_list_item_link strong" target="_blank">Шерл</a>
+                  <p class="answers__card_body_list_item_text p">
+                    (рассчитать стоимость доставки)
+                  </p>
+                </li>
+              </ul>
+              <p class="strong answers__card_body_list_subtitle">
+                Железная дорога:
+              </p>
+              <ul class="answers__card_body_list">
+                <li class="answers__card_body_list_item">
+                  <a href="http://rpp.rzd.ru/Rzd/" class="answers__card_body_list_item_link strong" target="_blank">Провозная плата на сайте РЖД</a>
+                </li>
+                <li class="answers__card_body_list_item">
+                  <a href="http://rtarif.ru/1001/" class="answers__card_body_list_item_link strong" target="_blank">Тариф на сайте ЖД Тариф</a>
+                </li>
+              </ul>
+              <p class="strong answers__card_body_list_stoke">
+                Доставка груза до транспортной компании <span>бесплатно!<span>
+              </p>
+              <a href="#collapse-1" class="answers__accordion_btn_hide h3" data-toggle="collapse">
+                <p class="h5">
+                  свернуть
+                </p>
+                <div class="answers__accordion_arrow">
+                  <img src="img/answers/arrow-hide.svg" alt="">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="answers__accordion_card">
+          <a href="#collapse-2" class="answers__accordion_btn h3" data-toggle="collapse"  id="headingOne">
+            <p>Как оплатить товар?</p>
+            <div class="answers__accordion_show">
+              <p class="h5">
+                ответ
+              </p>
+              <div class="answers__accordion_arrow">
+                <img src="img/answers/arrow-show.svg" alt="">
+              </div>
+            </div>
+          </a>             
+          <div id="collapse-2" class="collapse answers__card_show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="answers__card_body p">
+              <p>
+                Оплата производится наличным или безналичным способом.
+              </p>
+              <a href="#collapse-2" class="answers__accordion_btn_hide h3" data-toggle="collapse">
+                <p class="h5">
+                  свернуть
+                </p>
+                <div class="answers__accordion_arrow">
+                  <img src="img/answers/arrow-hide.svg" alt="">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>      
     </div>
   </section>
@@ -311,13 +391,13 @@
       <h2 class="section__title h2 footer-form__title">
         У Вас остались вопросы или требуется помощь в подборе детали?
       </h2>
-      <form class="footer-form__form">
+      <form class="footer-form__form js-form-default">
         <div class="footer-form__form_wrap">
           <input class="footer-form__form_input" type="hidden" value="Заявка с формы 'У Вас остались вопросы или требуется помощь в подборе детали?'" name="title">
           <input class="footer-form__form_input" type="text" placeholder="Имя" name="name">
           <input class="footer-form__form_input" type="text" placeholder="Телефон/Почта" name="phone-email">
           <input class="footer-form__form_input" type="text" placeholder="Вопрос" name="messege">
-          <button type="submit" class="footer-form__form_btn h4">Отправить</button>
+          <button type="submit" class="footer-form__form_btn h4 js-validate-form js-onClickGoal" data-goal="clickFooterFormBtn">Отправить</button>
         </div>        
         <label class="footer-form__form_label">
           <input type="checkbox" class="footer-form__form_checkbox" checked required>
@@ -425,7 +505,7 @@
               <div class="contacts__phone_item_icon">
                 <img src="img/contacts/envelope-icon.svg" alt="">
               </div>
-              <a href="mailto:2672091@mail.ru" class="contacts__phone_item_text h3">
+              <a href="mailto:2672091@mail.ru" class="contacts__phone_item_text h3 js-onClickGoal" data-goal="clickFooterEmail">
                 2672091@mail.ru
               </a>
             </li>
@@ -433,8 +513,7 @@
               <div class="contacts__phone_item_icon">
                 <img src="img/contacts/phone-icon.svg" alt="">
               </div>
-              <a href="tel:+79028915570" class="contacts__phone_item_text h3">
-                +7 (902) 891-55-70
+              <a href="tel:+79028915570" class="contacts__phone_item_text h3 js-onClickGoal" data-goal="clickFooterPhone">+7 (902) 891-55-70
               </a>
             </li>
           </ul>

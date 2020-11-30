@@ -79,3 +79,64 @@ const accordionClose = (triggerSelector) => {
 };
 accordionClose('.answers__accordion_btn_hide');
 accordion('.answers__accordion_btn');
+
+//Metrica
+var ymID = 69913831;
+
+$(function() {
+    $('.js-callback').on("click", function() {
+        var sendPopup = $(this).attr('data-send');
+        // $(modal).find('input[name=target]').val(parent);
+        $(".popup-form__btn").attr("data-goal", sendPopup);
+        console.log(sendPopup);
+    });
+
+});
+
+var metrikaGoals = function () {
+
+
+    $('.js-onClickGoal').click(function () {
+
+        var goal = this.dataset.goal;
+        // var gtagGoal = this.dataset.gtagGoal;
+        // var thisGoal = getCookie(goal);
+        if (typeof thisGoal == "undefined") {
+            if ((typeof goal !== 'undefined' || goal != '') && typeof ym !== 'undefined') {
+                ym(ymID, 'reachGoal', goal);
+            }
+
+            var date = new Date(new Date().getTime() + 720 * 3600 * 1000);
+            document.cookie = goal + "=1; path=/; expires=" + date.toUTCString();
+        }
+
+
+    });
+
+    $('.js-validate-form').click(function () {
+        var form = $(this).closest('.js-form-default');
+        var validated = 1;
+
+        $(form).find('input[required]').each(function (indexInArray, valueOfElement) {
+            if ($(valueOfElement).val() == "") {
+                validated = 0;
+            }
+        });
+
+        if (validated == 0) {
+
+
+            var goal = this.dataset.goal;
+            // var gtagGoal = this.dataset.gtagGoal;
+
+            if ((typeof goal !== 'undefined' || goal != '') && typeof ym !== 'undefined') {
+                ym(ymID, 'reachGoal', goal);
+            }
+        }
+        console.log(form);
+    });
+};
+
+$(document).ready(function () {
+    metrikaGoals();
+});
