@@ -1,4 +1,5 @@
 <?php
+// echo var_dump($_FILES);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
