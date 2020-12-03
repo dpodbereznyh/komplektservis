@@ -17,15 +17,26 @@ try {
 	$mail->Port = 465;
 	$mail->setFrom('no-reply@gridstudio.ru'); // Ваш Email
 	$mail->addAddress($recipient_mail1); // Email получателя
+	// $mail->addAddress('2672091@mail.ru'); // Email получателя
 	$mail->addAddress('pdv@apimedia.ru'); // Email получателя
 }
-
 
 catch (Exception $e) {
 	echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
 
 
+if (!empty($_FILES)) {
+	foreach ($_FILES["attachment"]["error"] as $key => $error) {
+	    if ($error == UPLOAD_ERR_OK) {
+	        $file = $_FILES["attachment"]["tmp_name"][$key];
+	        $fileName = basename($_FILES["attachment"]["name"][$key]);
+
+	        $mail->addAttachment($file, $fileName);
+	    }
+	}
+}
+	
 
 $message = "<h1>КОМПЛЕКТСЕРВИС</h1>";
 if (isset($_POST['name'])) {
@@ -43,15 +54,12 @@ if (isset($_POST['messege'])) {
 if (isset($_POST['phone-email'])) {
 	$message .= "Телефон/Почта: ".$_POST['phone-email']."<br />";
 }
-
+if (isset($_POST['file'])) {
+	$message .= "Файл: ".$_POST['file']."<br />";
+}
 if (isset($_POST['title'])) {
 	$message .= "Заголовок: ".$_POST['title']."<br />";
 }
-
-
-
-
-
 
 // Письмо
 $mail->isHTML(true);

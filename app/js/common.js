@@ -31,13 +31,26 @@ $(document).ready(function () {
         $('body,html').animate({scrollTop: top}, 500);
     });
 
+    var files;
+        $('input[type=file]').change(function(){
+            files = this.files; 
+        });
+          
     
-
-    $(".main-screen__form, .footer-form__form").submit(function(){
-        $.ajax({
+    
+    $(".main-screen__form, .footer-form__form").submit(function(){  
+        console.log(files);
+        var data = new FormData();
+        $.each( files, function( key, value ){
+            data.append( key, value );
+        });
+        console.log(data);  
+       $.ajax({
             type: "POST",
             url: "send.php",
-            data: $(this).serialize()
+            data: data,
+            processData: false, // Не обрабатываем файлы (Don't process the files)
+            contentType: false, // Так jQuery скажет серверу что это строковой запрос
         }).done(function() {
             $.fancybox.open({
                 src: '#fancyalert',
