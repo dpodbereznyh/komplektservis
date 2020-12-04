@@ -86,18 +86,18 @@
                 Оставьте заявку и мы подберем<br>Вам детали по лучшей цене
               </p>
               <input class="main-screen__form_input" type="hidden" value="Форма с главного экрана" name="title">
-              <input class="main-screen__form_input" type="text" placeholder="Имя" name="name">
-              <input class="main-screen__form_input" type="text" placeholder="Телефон" name="phone">
+              <input class="main-screen__form_input" type="text" placeholder="Имя" name="name" required>
+              <input class="main-screen__form_input" type="text" placeholder="Телефон" name="phone" required>
               <input class="main-screen__form_input" type="text" placeholder="Почта" name="email">
               <textarea class="main-screen__form_textarea" name="messege" placeholder="Какие детали нужны?"></textarea>
-              <input  class="main-screen__form_input_file" type="file" multiple name="attachment[]">
-              <!-- <label class="main-screen__form_input_file_label p"> -->
-                <!-- <input  class="main-screen__form_input_file" type="file" name="file">  -->
-                <!-- <span  class="main-screen__form_input_file_link">Добавить файлы</span> -->
-              <!-- </label> -->
+              <label class="main-screen__form_input_file_label p">
+                <span  class="main-screen__form_input_file_link p">Добавить файл</span>
+                <span  class="main-screen__form_input_file_name small">файл не выбран</span>
+                <input  class="main-screen__form_input_file" type="file" name="attachment[]">
+              </label>
               <label class="main-screen__form_label">
                 <input type="checkbox" class="main-screen__form_checkbox" checked required>
-                <span class="main-screen__form_checkbox-span"></span>
+                <span class="main-screen__form_checkbox-span "></span>
                 <span class="small main-screen__form_label_link">
                   Я согласен на обработку персональных данных
                 </span>
@@ -402,13 +402,21 @@
       <form class="footer-form__form js-form-default">
         <div class="footer-form__form_wrap">
           <input class="footer-form__form_input" type="hidden" value="Заявка с формы 'У Вас остались вопросы или требуется помощь в подборе детали?'" name="title">
-          <input class="footer-form__form_input" type="text" placeholder="Имя" name="name">
-          <input class="footer-form__form_input" type="text" placeholder="Телефон/Почта" name="phone-email">
+          <input class="footer-form__form_input" type="text" placeholder="Имя" name="name" required>
+          <input class="footer-form__form_input" type="text" placeholder="Телефон/Почта" name="phone-email" required>
           <input class="footer-form__form_input" type="text" placeholder="Вопрос" name="messege">
+          <label class="footer-form__form_input_file_label footer-form__form_input_file_label-mobile p">
+            <span  class="footer-form__form_input_file_link p">Добавить файл</span>
+            <span  class="footer-form__form_input_file_name small">файл не выбран</span>
+            <input  class="footer-form__form_input_file" type="file" name="attachment[]">
+          </label>
           <button type="submit" class="footer-form__form_btn h4 js-validate-form js-onClickGoal" data-goal="clickFooterFormBtn">Отправить</button>
         </div>
-        <input  class="footer-form__form_input_file" type="file" multiple name="attachment[]">
-
+        <label class="footer-form__form_input_file_label footer-form__form_input_file_label-desktop p">
+          <span  class="footer-form__form_input_file_link p">Добавить файл</span>
+          <span  class="footer-form__form_input_file_name small">файл не выбран</span>
+          <input  class="footer-form__form_input_file" type="file" name="attachment[]">
+        </label>
         <label class="footer-form__form_label">
           <input type="checkbox" class="footer-form__form_checkbox" checked required>
           <span class="footer-form__form_checkbox-span"></span>

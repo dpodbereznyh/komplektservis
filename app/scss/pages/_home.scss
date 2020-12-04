@@ -290,21 +290,23 @@
     }
   }
   &__form_input_file {
-    // position: absolute;
-    // left: 0;
-    // visibility: hidden;
-    margin-bottom: 32px;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
   }
   &__form_input_file_label {
-    border: 1px solid $dark_8;
-    border-radius: 10px;
-    padding: 16px;
-    cursor: pointer;
-    background: $dark_8;
-    transition: .35s;
     margin-bottom: 32px;
+  }
+  &__form_input_file_link {
+    padding: 8px 16px;
+    background-color: $dark_8;
+    border-radius: 10px;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: .35s;
     &:hover {
-      background: $secondary;
+      background-color: $secondary;
+      color: $light;
       transition: .35s;
     }
   }
@@ -379,6 +381,18 @@
       background: radial-gradient(50% 50% at 50% 50%, #053D8F 0%, #053D8F 100%);
       transition: all .35s ease;
     }
+  }
+}
+@media screen and (max-width: 800.5px) {
+  .main-screen__form_input_file_link {
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+  .main-screen__form_input_file_label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
   }
 }
 @include laptop {
@@ -734,6 +748,30 @@
       line-height: 20px;                  
     }
   }
+  &__form_input_file {
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+  }
+  &__form_input_file_label {
+    margin-bottom: 32px;
+  }
+  &__form_input_file_link {
+    padding: 8px 16px;
+    background-color: $dark_8;
+    border-radius: 10px;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: .35s;
+    &:hover {
+      background-color: $secondary;
+      color: $light;
+      transition: .35s;
+    }
+  }
+  &__form_input_file_name {
+    color: $light;
+  }
   &__form_btn {
     background: radial-gradient(#FFA499,#F06352);
     box-shadow: 0px 10px 35px rgba(240, 99, 82, 0.55);
@@ -795,13 +833,29 @@
   &__form_label_link {
     color: $light;
   }
+  &__form_input_file_label-mobile {
+    display: none;
+  }
 }
-#file-upload-button {
-  color: red!important;
-  margin: 0px 16px 0px 0px!important;
-  display: none;
+@media screen and (max-width: 800.5px) {
+  
+  
 }
 @media screen and (max-width: 990.5px) {
+  .footer-form__form_input_file_link {
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+  .footer-form__form_input_file_label-desktop {
+    display: none;
+  }
+  .footer-form__form_input_file_label-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto 32px;
+  }
   .footer-form__title {
     text-align: center;
   }

@@ -131,7 +131,6 @@ var metrikaGoals = function () {
                 ym(ymID, 'reachGoal', goal);
             }
         }
-        console.log(form);
     });
 };
 
@@ -144,6 +143,18 @@ document.addEventListener('DOMContentLoaded', function(){
     const forms = () => {
         const form = document.querySelectorAll('form');
         const inputs = document.querySelectorAll('input');     
+        const textarea = document.querySelectorAll('textarea'); 
+        const upload = document.querySelectorAll('[name="attachment[]"]');
+        
+        upload.forEach(item => {
+            item.addEventListener('input', () => {
+                let dots;
+                const arr = item.files[0].name.split('.');
+                arr[0].length > 10 ? dots = '...' : dots = '.';
+                const uploadFileName = arr[0].substring(0, 10) + dots + arr[1];
+                item.previousElementSibling.textContent = uploadFileName;                
+            });
+        });
         //Отправка запроса
         const postData = async (url, data) => {
             let res = await fetch(url, {
@@ -158,6 +169,14 @@ document.addEventListener('DOMContentLoaded', function(){
             inputs.forEach(item => {
                 item.value = '';
             });
+            upload.forEach(item => {
+                item.previousElementSibling.textContent = "файл не выбран";            
+            });
+        };
+        const clearTextarea = () => {
+            textarea.forEach(item => {
+                item.value = '';
+            });
         };
         //Перебираем формы
         form.forEach(item => {
@@ -165,7 +184,6 @@ document.addEventListener('DOMContentLoaded', function(){
                 e.preventDefault();               
                 //Собираем данные из формы
                 const formData = new FormData(item);
-                console.log(formData);
                 //Отправляем данные на сервер
                 postData('send.php', formData)
                     .then(res => {
@@ -176,6 +194,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     .catch(() => statusMessege.textContent = messege.error)
                     .finally(() => {
                         clearInputs();
+                        clearTextarea();
                         // setTimeout(() => {
                         //     statusMessege.remove();
                         // }, 5000000);
@@ -183,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function(){
             });
         });
     };
-    forms('.main-screen__form'); 
-    forms('.footer-form__form'); 
+    forms('.main-screen__form', '.footer-form__form'); 
+    // forms('.footer-form__form'); 
 });
 
