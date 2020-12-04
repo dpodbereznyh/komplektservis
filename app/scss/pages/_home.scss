@@ -16,8 +16,8 @@
   background-color: #000;
 }
 .header {
-  // background: $dark url(../img/header/main-screen-bg.png)no-repeat top center/100% auto;
-  background: $dark;
+  background: $dark url(../img/header/main-screen-bg.png)no-repeat top center/100% auto;
+  // background: $dark;
   padding-top: 32px;
   &__logo {
     max-width: 199px;
@@ -675,7 +675,7 @@
     color: $default;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     width: fit-content;
     margin-top: 16px;
     margin-left: auto;
@@ -750,6 +750,11 @@
       transition: .35s;
     }
   }
+  &__form_input_file {
+    color: $light;
+    margin-bottom: 32px;
+    font-size: 14px;
+  }
   &__form_label {
     display: flex;
     position: relative;
@@ -790,6 +795,11 @@
   &__form_label_link {
     color: $light;
   }
+}
+#file-upload-button {
+  color: red!important;
+  margin: 0px 16px 0px 0px!important;
+  display: none;
 }
 @media screen and (max-width: 990.5px) {
   .footer-form__title {
@@ -835,7 +845,7 @@
   }
   &__address_item {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     margin-bottom: 32px;
     &:last-child {
       margin-bottom: 0;
