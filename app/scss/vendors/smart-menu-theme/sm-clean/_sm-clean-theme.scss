@@ -339,10 +339,15 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 		padding: 0 $sm-clean__desktop-padding-horizontal;
 		background: $sm-clean__desktop-bg;
 		border-radius: $sm-clean__desktop-border-radius;
-		li:nth-child(5n) {
+		li:nth-child(7n) {
 			display: none;
 		}
 		li:nth-child(6n) {
+			a {
+				padding: 0 0 0 0!important;
+			}
+		}
+		li:nth-child(8n) {
 			display: none;
 		}
 		li {
